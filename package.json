@@ -1,0 +1,23 @@
+{
+    "name": "real-estate",
+    "version": "1.0.0",
+    "description": "Capstone: Real Estate Marketplace",
+    "main": "index.js",
+    "scripts": {
+        "dev": "lite-server",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "ganache": "ganache-cli -m \"$(<~/.dev_seeds/testnet)\""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/bamaung/real-estate.git"
+    },
+    "author": "yemyatoo@lambdr.com",
+    "license": "MIT",
+    "dependencies": {
+        "openzeppelin-solidity": "^2.2.0",
+    },
+    "devDependencies": {
+        "lite-server": "^2.6.1",
+    }
+}
