@@ -47,12 +47,12 @@ contract Pausable is Ownable {
     bool private _paused;
 
     //  2) create a public setter using the inherited onlyOwner modifier
-    function pause() onlyOwner {
+    function pause() public onlyOwner {
         _paused = true;
         emit Paused(msg.sender);
     }
 
-    function unpause() onlyOwner {
+    function unpause() public onlyOwner {
         _paused = false;
         emit Unpaused(msg.sender);
     }
