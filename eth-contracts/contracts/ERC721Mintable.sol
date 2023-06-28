@@ -164,7 +164,7 @@ contract ERC721 is Pausable, ERC165 {
         return _tokenOwner[tokenId];
     }
 
-//    @dev Approves another address to transfer the given token ID
+    // @dev Approves another address to transfer the given token ID
     function approve(address to, uint256 tokenId) public {
         address _owner = ownerOf(tokenId);
 
@@ -555,9 +555,9 @@ contract ERC721Metadata is ERC721Enumerable, usingOraclize {
 //      -returns a true boolean upon completion of the function
 //      -calls the superclass mint and setTokenURI functions
 
-contract CustomERC721Token is ERC721Metadata {
-    constructor(string memory name, string memory symbol) 
-        ERC721Metadata(name, symbol, "https://s3-us-west-2.amazonaws.com/udacity-blockchain/capstone/") 
+contract ERC721MintableComplete is ERC721Metadata {
+    constructor(string memory name, string memory symbol, string memory baseTokenURI) 
+        ERC721Metadata(name, symbol, baseTokenURI) 
         public
     {
     }
