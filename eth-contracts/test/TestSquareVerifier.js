@@ -32,6 +32,6 @@ describe('Test verification with incorrect proof', function () {
             "0x0000000000000000000000000000000000000000000000000000000000000002"
         ];
         const result = await this.contract.verifyTx(proof, _inputs);
-        assert.equal(result, false, "Must fail Verification with incorrect proof");
+        assert.equal(result, false, "Verification pass with incorrect proof");
     });
 });
