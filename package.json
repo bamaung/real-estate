@@ -15,7 +15,8 @@
     "author": "yemyatoo@lambdr.com",
     "license": "MIT",
     "dependencies": {
-        "openzeppelin-solidity": "^2.2.0"
+        "openzeppelin-solidity": "^2.2.0",
+        "truffle-hdwallet-provider": "^1.0.17"
     },
     "devDependencies": {
         "lite-server": "^2.6.1",
