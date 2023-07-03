@@ -46,7 +46,7 @@ Contract Address: `0x5f56367dbe3ef954f4e2782dd126121cdb3fe350`
 
 ## Contract ABI (SolnSquareVerifier.sol)
 
-```json
+```js
 [
   {
     constant: true,
