@@ -38,11 +38,13 @@ To install, download or clone the repo, then:
 
 `node mint.js`
 
-## Token tracker on etherscan.io (Sepolia testnet)
+## Contract address and token tracker on etherscan.io (Sepolia testnet)
+
+Contract Address: `0x5f56367dbe3ef954f4e2782dd126121cdb3fe350`
 
 [Sepolia Etherscan](https://sepolia.etherscan.io/token/0x5f56367dbe3ef954f4e2782dd126121cdb3fe350)
 
-## Udacity Real Estate collection on opensea (Sepolia testnet)
+## OpenSea MarketPlace Storefront (Sepolia testnet)
 
 [Udacity Real Estate Collection](https://testnets.opensea.io/collection/udacity-real-estate-2)
 
