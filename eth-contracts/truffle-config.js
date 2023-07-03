@@ -11,17 +11,12 @@ module.exports = {
             port: 8545,
             network_id: "*",
         },
-        goerli: {
-            provider: function() {
-                return new HDWalletProvider(MNEMONIC,`https://goerli.infura.io/v3/${INFURA_KEY}`)
-            },
-            network_id: "5"
-        },
         sepolia: {
             provider: function() {
                 return new HDWalletProvider(MNEMONIC,`https://sepolia.infura.io/v3/${INFURA_KEY}`)
             },
-            network_id: "11155111"
+            network_id: "11155111",
+            gas: 4465030
         }
     },
     compilers: {
