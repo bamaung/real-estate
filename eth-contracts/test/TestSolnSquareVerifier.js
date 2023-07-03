@@ -1,23 +1,15 @@
 var SquareVerifier = artifacts.require('SquareVerifier');
 var SolnSquareVerifier = artifacts.require('SolnSquareVerifier');
-const proof_3_9 = require("../../zokrates/code/square/test_3_9/proof.json");
-const proof_4_16 = require("../../zokrates/code/square/test_4_16/proof.json");
-const proof_5_25 = require("../../zokrates/code/square/test_5_25/proof.json");
+const proof_1 = require("../../proofs/proof_1.json");
+const proof_2 = require("../../proofs/proof_2.json");
 const truffleAssert = require('truffle-assertions');
 
 contract('SolnSquareVerifier', accounts => {
 
     const account_1 = accounts[0];
     const account_2 = accounts[1];
-    const account_3 = accounts[2];
-    const account_4 = accounts[3];
-    const account_5 = accounts[4];
 
     const token_id_1 = 1;
-    const token_id_2 = 2;
-    const token_id_3 = 3;
-    const token_id_4 = 4;
-    const token_id_5 = 5;
 
     const tokenName = "Udacity Real Estate";
     const tokenSymbol = "URE";
@@ -31,7 +23,7 @@ contract('SolnSquareVerifier', accounts => {
     // Test if a new solution can be added for contract - SolnSquareVerifier
     describe('Test if a new solution can be added for contract', () => {
         it('should add a solution', async function () {
-            let { proof, inputs } = proof_3_9;
+            let { proof, inputs } = proof_1;
             const result = await this.solnSquareVerifier.addSolution(proof, inputs, account_1, {from: account_1});
             truffleAssert.eventEmitted(result, 'SolutionAdded', ev => ev.solutionAddress === account_1);
         });
@@ -40,9 +32,9 @@ contract('SolnSquareVerifier', accounts => {
     // Test if an ERC721 token can be minted for contract - SolnSquareVerifier
     describe('Test if an ERC721 token can be minted for contract', () => {
         it('should mint ERC721 token', async function () {
-            let { proof, inputs } = proof_4_16;
-            const result = await this.solnSquareVerifier.mintToken(proof, inputs, account_2, token_id_2, {from: account_1});
-            truffleAssert.eventEmitted(result, 'TokenMinted', ev => ev.to === account_2 && ev.tokenId.toNumber() === token_id_2);
+            let { proof, inputs } = proof_2;
+            const result = await this.solnSquareVerifier.mintToken(proof, inputs, account_2, token_id_1, {from: account_1});
+            truffleAssert.eventEmitted(result, 'TokenMinted', ev => ev.to === account_2 && ev.tokenId.toNumber() === token_id_1);
         });
     });
 });
